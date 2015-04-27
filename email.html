@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap empty page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	
+		<style type="text/css">
+			.jumbotron {
+				margin: 60px 0;
+				text-align: center;
+			}
+			
+			.marketing
+			{
+				width: 70%;
+				margin: auto;
+			}
+
+		</style>
+	</head>
+	
+	<body>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="#">StiNetwork</a>
+					<ul class="nav">
+						<li><a href="#">Home</a></li>
+						<li class="active"><a href="email.html">Email</a></li>
+						<li><a href="#">Hosted project(s)</a></li>
+						<li><a href="#">About us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<p class="lead">We are giving free email address to our hosted projects !</p>
+	<div class="container-fluid">
+	
+		<div class="row-fluid">
+			<div class="span3">
+				<p>You need a token to create a new email address, each token are specific to a domain.</p>
+				<h4>Server Information</h4>
+				<h5>Inbounds</h5>
+				<ul>
+					<li>IMAP</li>
+					<li>Host : mail.sticode.com</li>
+					<li>Post : 993</li>
+					<li>Security : SSL </li>
+				</ul>
+				<h5>Outbounds</h5>
+				<ul>
+					<li>SMTP</li>
+					<li>Host : mail.sticode.com</li>
+					<li>Post : 587</li>
+					<li>Security : SSL </li>
+				</ul>
+			</div>
+			
+			<div class="span7">
+				<form method="post" action="create_email.php">
+					<fieldset>
+						<legend>Email Creation</legend>
+						<label>Email Address</label>
+						<div class="input-append">
+							<input class="span8" id="appendedDropdownButton" type="text">
+							<div class="btn-group">
+							 <button class="btn dropdown-toggle" data-toggle="dropdown">
+								@domain.tld
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="#">stinetwork.info</a></li>
+								<li><a href="#">sticode.com</a></li>
+								<li><a href="#">sticode.org</a></li>
+							</ul>
+							</div>
+						</div>
+						<label>Password</label>
+						<input type="password" name="password">
+						<label>Password (Confirm)</label>
+						<input type="password" name="passwordconfirm">
+						<br>
+						<div class="form-actions">
+							<button type="button" onclick="alert('allo');" class="btn btn-primary">Create</button>
+						</div>
+					</fieldset>
+				</form>
+								<form method="post" action="create_email.php">
+					<fieldset>
+						<legend>Change your password</legend>
+						<label>Email Address</label>
+						<div class="input-append">
+							<input class="span8" id="appendedDropdownButton" type="text">
+							<div class="btn-group">
+							 <button class="btn dropdown-toggle" data-toggle="dropdown">
+								@domain.tld
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="#">stinetwork.info</a></li>
+								<li><a href="#">sticode.com</a></li>
+								<li><a href="#">sticode.org</a></li>
+							</ul>
+							</div>
+						</div>
+						<label>Current Password</label>
+						<input type="password" name="password">
+						<label>New Password</label>
+						<input type="password" name="newpassword">
+						<label>New Password (Confirm)</label>
+						<input type="password" name="newpasswordconfirm">
+						<br>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">Save</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+		
+	</body>
+</html>
